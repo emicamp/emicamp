@@ -29,9 +29,9 @@ jobs:
     - name: build angular app to prod
       run: npm install && npm run build:prod
     - name: deploy to github pages
-      uses: JamesIves/github-pages-deploy-action@releases/v2
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
-        BASE_BRANCH: main
-        BRANCH: prod
-        FOLDER: emicamp/dist
+        token: ${{ secrets.GH_TOKEN }}
+        # BASE_BRANCH: main
+        branch: prod
+        folder: emicamp/dist
