@@ -1,9 +1,9 @@
 name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches:
-      - main # or your main branch name
+# on:
+#   push:
+#     branches:
+#       - main # or your main branch name
 
 jobs:
   deploy:
@@ -21,11 +21,11 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: npm run build:prod
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/emicamp # e.g., dist/my-app
-          branch: gh-pages
+          # folder: dist/emicamp # e.g., dist/my-app
+          # branch: gh-pages
           token: ${{ secrets.GH_TOKEN }}
