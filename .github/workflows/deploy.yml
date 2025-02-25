@@ -6,8 +6,8 @@ on:
       - main # or your main branch name
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  build:
+  runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -22,10 +22,11 @@ jobs:
 
       - name: Build
         run: npm run build:prod
-
+  deploy:
+  runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/browser # e.g., dist/my-app
-          # branch: gh-pages
           token: ${{ secrets.GH_TOKEN }}
