@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
+
+  constructor(private router: Router) {
+
+  }
+
+  goToShop(event: any) {
+    event.preventDefault()
+    this.router.navigate(['shop']);
+  }
 
 }
