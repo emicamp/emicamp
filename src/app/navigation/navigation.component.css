@@ -1,12 +1,21 @@
 .container {
     display: flex;
-    justify-content: right;
     background-color: #EBE4E4;
     border-radius: 25px;
+    justify-content: space-between;
 }
 
 .link-container {
     margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #08415c;
+    margin: 10px;
+    font-weight: 1500;
+    margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
 }

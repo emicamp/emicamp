@@ -1,16 +1,20 @@
 .image {
-    width: 50%;
-    height: 70%;
+    /* width: 30%;
+    height: 40%; */
+    height: auto;
+    justify-content: center;
+    display: flex;
+    padding: 2% 10%;
 }
 
 .title {
     font-size: 140px;
     color: #08415c;
-    width: 50%;
+    /* width: 50%; */
     margin: 20px;
 }
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }

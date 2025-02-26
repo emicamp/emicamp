@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
+  public title : string = "Emasaur's Craft Corner";
+
 
   constructor(private router: Router) {
 
